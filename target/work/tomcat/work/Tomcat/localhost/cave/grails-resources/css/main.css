@@ -1,0 +1,75 @@
+/* FONT STACK */
+body,
+input, select, textarea {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+}
+
+/* BASE LAYOUT */
+
+html {
+	background-repeat: no-repeat;
+	height: 100%;
+	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html.no-cssgradients {
+	background-color: #aaa;
+}
+
+.main-content {
+	background-color: #ffffff;
+	margin: 0 auto;
+	max-width: 960px;
+}
+.main-menu {
+	margin-top: 12px;
+}
+.portlet {
+	background-color: #c2c2c2;
+  	-webkit-border-radius: 4px;
+  	-moz-border-radius: 4px;
+  	border-radius: 4px;
+  	clear: both;
+	color: #000000;	
+	display: inline-block;
+	height: 140px;
+	margin: 2px;	
+	overflow: hidden;	
+	padding: 12px;
+	position: relative;
+	width: 45%;	
+}
+.portlet-title {
+	font-family: "Helvetica Neue";
+	font-size: 28px;	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;	
+	padding-top: 40px;
+	width: 200px;
+}
+.portlet-content {
+	font-family: "HelveticaNeue-Light";
+	font-size: 16px;	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	width: 200px;
+}
+.portlet a, .portlet a:visited {
+	color: #000000;		
+	text-decoration: none;	
+}
+
+.subtitle {
+	color: #ff7200;
+	font-family: "HelveticaNeue-Light";
+	font-size: 18px;
+}

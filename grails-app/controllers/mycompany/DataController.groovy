@@ -20,7 +20,7 @@ class DataController {
 		def userAuthInstance = Authority.get(2)
 		if (!userAuthInstance) userAuthInstance = new Authority(id: 2, authority: 'ROLE_USER', description: 'User role').save()
 		
-		def admin = new User(username: 'cake', realname: 'Gilles Vivies', password:'giav7461', enabled: true, email: 'gilles.vivies@orange.fr').save()
+		def admin = new User(username: 'admin', realname: 'Admin', password:'admin', enabled: true, email: '').save()
 		
 		UserAuthority.create admin, adminAuthInstance, true
 	}

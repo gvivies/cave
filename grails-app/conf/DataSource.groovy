@@ -30,8 +30,8 @@ environments {
         dataSource {
             dbCreate = "update"
 			url = "jdbc:cloudbees://cave"
-			username = "giav7461"
-			password = "giav7461"
+			username = "admin"
+			password = "admin"
 			configClass = HibernateFilterDomainConfiguration
         }
     }

@@ -1,19 +1,39 @@
 modules = {
-	application {
-		dependsOn 'angular'
-        resource url:'/js/app/app.js'
-		resource url:'/js/app/controllers/main-controller.js'
-		resource url:'/js/app/controllers/region-controllers.js'
-		resource url:'/js/app/services/region-services.js'
-	}
-	angular {
-		resource url:'/js/lib/angular.js'
-		resource url:'/js/lib/angular-resource.js'
-		resource url:'/js/lib/angular-route.js'
+    application {
+        resource url:'/js/application.js'
     }
-	mainstyle {
-		resource url:'/css/main.css'
-		resource url:'/css/mobile.css'
-		resource url:'/css/errors.css'
+	
+	drink {
+		resource url:'/js/drink.js'
+	}
+	
+	dashboard {
+		resource url:'/js/dashboard.js'
+	}
+	
+	filter {
+		resource url:'/js/filter.js'
+	}
+	
+	datepicker {
+		resource url:'/js/datepicker.js'
+	}
+	
+	map {
+		resource url:'/js/map.js'
+	}
+	
+	mapMobile {
+		resource url:'/js/map.mobile.js'
+	}
+
+	drinkMobile {
+		resource url:'/js/drink.mobile.js'
+	}
+	
+	jqueryMobile {
+		dependsOn 'jquery'
+		resource url:[dir: 'css', file: 'jquery.mobile-1.2.0.min.css'], disposition: 'head'
+		resource url:[dir: 'js', file: 'jquery.mobile-1.2.0.min.js'], disposition: 'head'
 	}
 }

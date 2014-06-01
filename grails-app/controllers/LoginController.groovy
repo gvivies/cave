@@ -19,20 +19,27 @@ class LoginController {
 	 */
 	def authenticationTrustResolver
 
+	/* Dependency injection */
+	def grailsApplication
+	
 	/**
 	 * Dependency injection for the springSecurityService.
 	 */
 	def springSecurityService
 
+	static final String AUTH_VIEW = 'auth'
+	
+	static final String AUTH_MOBILE_VIEW = 'auth.mobile'
+	
 	/**
 	 * Default action; redirects to 'defaultTargetUrl' if logged in, /login/auth otherwise.
 	 */
 	def index = {
 		if (springSecurityService.isLoggedIn()) {
 			redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
-		}
-		else {
-			redirect action: 'auth', params: params
+			return
+		} else {
+			redirect action: AUTH_VIEW, params: params
 		}
 	}
 
@@ -48,7 +55,10 @@ class LoginController {
 			return
 		}
 
-		String view = 'auth'
+		String view =  (grailsApplication.config.getProperty('mobileDebug')) ? AUTH_MOBILE_VIEW : AUTH_VIEW
+		withMobileDevice {
+			view = AUTH_MOBILE_VIEW
+		}
 		String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
 		render view: view, model: [postUrl: postUrl,
 		                           rememberMeParameter: config.rememberMe.parameter]
@@ -78,7 +88,11 @@ class LoginController {
 	 */
 	def full = {
 		def config = SpringSecurityUtils.securityConfig
-		render view: 'auth', params: params,
+		String view = AUTH_VIEW
+		withMobileDevice {
+			view = AUTH_MOBILE_VIEW
+		}
+		render view: view, params: params,
 			model: [hasCookie: authenticationTrustResolver.isRememberMe(SCH.context?.authentication),
 			        postUrl: "${request.contextPath}${config.apf.filterProcessesUrl}"]
 	}
@@ -114,7 +128,11 @@ class LoginController {
 		}
 		else {
 			flash.message = msg
-			redirect action: 'auth', params: params
+			String view = AUTH_VIEW
+			withMobileDevice {
+				view = AUTH_MOBILE_VIEW
+			}
+			redirect action: view, params: params
 		}
 	}
 

@@ -1,18 +1,16 @@
 class UrlMappings {
 
 	static mappings = {
-		"/rest/regions" (resources:"region")
-		"/rest/regions/$id?" (resource:"region")
-		
-		/*	
-        "/$controller/$action?/$id?(.${format})?"{
-            constraints {
-                // apply constraints here
-            }
-        }
-        */
+		"/$controller/$action?/$id?"{
+			constraints {
+				// apply constraints here
+			}
+		}
+
 		"/" (controller: "login", action : "auth")
-        "/index"(view:"/index")
-        "500"(view:'/error')
+		"/home" (controller: 'index', view: 'index')
+		"/cave/home" (controller: 'index', view: 'index')
+		"/logout" (controller: "logout", action : "")
+		"500" (view:'/error')
 	}
 }

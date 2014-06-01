@@ -1,41 +1,67 @@
-<%@ page import="com.gvivies.cave.Wine" %>
-<!DOCTYPE html>
+<%@ page import="mycompany.Wine" %>
 <html>
-	<head>
-		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'wine.label', default: 'Wine')}" />
-		<title><g:message code="default.edit.label" args="[entityName]" /></title>
-	</head>
-	<body>
-		<a href="#edit-wine" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="edit-wine" class="content scaffold-edit" role="main">
-			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
-			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
-			</g:if>
-			<g:hasErrors bean="${wineInstance}">
-			<ul class="errors" role="alert">
-				<g:eachError bean="${wineInstance}" var="error">
-				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-				</g:eachError>
-			</ul>
-			</g:hasErrors>
-			<g:form url="[resource:wineInstance, action:'update']" method="PUT" >
-				<g:hiddenField name="version" value="${wineInstance?.version}" />
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
-				</fieldset>
-			</g:form>
-		</div>
-	</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="layout" content="main" />
+        <g:set var="entityName" value="${message(code: 'wine.label', default: 'Wine')}" />
+        <title><g:message code="default.edit.label" args="[entityName]" /></title>
+    </head>
+    <body>
+	    <div id="tabs">
+      	    <div class="inactivetab"><g:link controller="bottle">${message(code: 'index.bottle.label', default: 'Bottles')}</g:link></div>
+      	    <div class="activetab"><g:link controller="wine">${message(code: 'index.wine.label', default: 'Wines')}</g:link></div>
+      	    <div class="inactivetab"><g:link controller="region">${message(code: 'index.region.label', default: 'Regions')}</g:link></div>
+      	    <div class="inactivetab"><g:link controller="dealer">${message(code: 'index.dealer.label', default: 'Dealers')}</g:link></div>
+      	    <g:userTab admin='${isAdmin}' />
+        </div>
+        <div id="actions">
+	        <div class="nav">
+	            <span class="menuButton"><g:link class="list" action="list"><g:message code="wine.list.label" args="[entityName]" /></g:link></span>
+    	        <span class="menuButton"><g:link class="create" action="create"><g:message code="wine.new.label" args="[entityName]" /></g:link></span>
+    	    </div>
+        </div>
+        <div id="content">   
+            <h1><g:message code="wine.edit.label" args="[entityName]" /></h1>
+            <g:if test="${flash.message}">
+            <div class="message">${flash.message}</div>
+            </g:if>
+            <g:hasErrors bean="${wineInstance}">
+            <div class="errors">
+                <g:renderErrors bean="${wineInstance}" as="list" />
+            </div>
+            </g:hasErrors>
+            <g:form method="post" >
+                <g:hiddenField name="id" value="${wineInstance?.id}" />
+                <g:hiddenField name="version" value="${wineInstance?.version}" />
+                <div class="dialog">
+                    <table>
+                        <tbody>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="name"><g:message code="wine.name.label" default="Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: wineInstance, field: 'name', 'errors')}">
+                                    <g:textField name="name" value="${wineInstance?.name}" size="50" />
+                                </td>
+                            </tr>
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="region"><g:message code="wine.region.label" default="Region" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: wineInstance, field: 'region', 'errors')}">
+                                    <g:select name="region.id" from="${regionList}" optionKey="id" value="${wineInstance?.region?.id}" optionValue = "name" />
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="buttons">
+                    <span class="button"><g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
+                    <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+                </div>
+            </g:form>
+        </div>
+    </body>
 </html>

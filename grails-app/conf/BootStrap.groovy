@@ -1,10 +1,14 @@
-import com.gvivies.cave.DataController
+import mycompany.DataController
 
 class BootStrap {
 
-    def init = { servletContext ->
+	def springSecurityService
+
+	def init = { servletContext ->
+		
 		DataController.initSecurity()
-    }
-    def destroy = {
-    }
+	}
+
+	def destroy = {
+	}
 }

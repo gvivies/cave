@@ -1,0 +1,170 @@
+
+/* CSS stylesheet for login page */
+html {
+	display: block;
+	height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#67b1ca), to(#183a6a)) no-repeat;
+    background: -moz-linear-gradient(top, #67b1ca, #183a6a) no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67b1ca', endColorstr='#183a6a');
+}
+body { 
+	font: 11px arial, helvetica, sans-serif; 
+}
+
+#login {
+	margin: 15px 0px;
+	color: #000000;
+	font-family: arial,helvetica,sans-serif;
+	font-size: 20px;	
+	padding: 0px;
+	text-align: center;
+}
+
+#login .inner {
+	width: 392px;
+	padding-bottom: 16px;
+	margin: 60px auto;
+	text-align: left;
+	border: 2px solid #D6D6D6;
+	background-color: #4D4D4D;
+	-khtml-box-shadow: 2px 2px 2px #eee;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius:  6px 6px 6px 6px;
+    -webkit-border-radius:  6px 6px 6px 6px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fcfbf7), to(#d8d8d8));
+    background: -moz-linear-gradient(top, #fcfbf7, #d8d8d8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfbf7', endColorstr='#d8d8d8');
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 4px 4px  rgba(0,0,0,0.3);
+    -webkit-box-shadow: 2px 4px 4px rgba(0,0,0,0.3);    
+}
+
+#login .inner input {
+	font-size: 11px;
+	background-color: #F8F8F8;
+}
+	
+#login .inner .fheader {
+    margin: 10px 8px 14px;
+    padding: 4px 0;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	background: #4b4e6d;
+	background: -webkit-gradient(linear, left top, right bottom, from(#4b4e6d), to(#4b7a96));
+    background: -moz-linear-gradient(left, #4b4e6d, #4b7a96);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b4e6d', endColorstr='#4b7a96');
+}
+
+#login .inner .fheader .label {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url("../images/bottle.gif");
+    background-origin: padding-box;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 54px auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 9px 66px 10px;
+}
+
+#login .inner .cssform p {
+	clear: left;
+	margin: 0;
+	padding: 4px 0 3px 0;
+	padding-left: 25px;
+	margin-bottom: 10px;
+	height: 20px;
+}
+
+#login .inner .cssform label {
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	margin-left: 0px;
+	width: 100px;
+	padding-top: 3px;
+	padding-right: 10px;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 11px;	
+}
+
+#login #remember_me_holder {
+	padding-left: 120px;
+}
+
+#login #submit {
+	margin-left: 15px;
+}
+
+#login #remember_me_holder label {
+	float: none;
+	margin-left: 0;
+	text-align: left;
+	width: 200px
+}
+
+#login .inner .login_message {
+	padding: 6px 22px 8px;
+	color: #F4A63F;
+}
+
+#login .inner .text_ {
+		width: 230px;
+}
+
+#login .inner .chk {
+	height: 12px;
+}
+
+#login .inner .cssform .clear { /* generic container (i.e. div) for floating buttons */
+   	overflow: hidden;
+   	width: 100%;
+}
+	
+#login .inner .cssform #command a.button {
+	background: #4b4e6d;
+	color: #ffffff;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	display: inline-block;
+	font-family: arial,helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.5em;
+	overflow: visible; /* IE */
+	padding: 4px 66px;
+	text-decoration: none;
+	width: auto; /* IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#4b4e6d), to(#4b7a96));
+    background: -moz-linear-gradient(top, #4b4e6d, #4b7a96);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b4e6d', endColorstr='#4b7a96');
+}
+
+#login .inner .cssform #command a.button:hover {
+	background: #4b4e6d;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#login .inner .cssform #command a.button:active {
+	background: #4b4e6d;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	position: relative;
+	top: 1px;
+}
+
+#login .inner .cssform #command {
+	text-align: center;
+}

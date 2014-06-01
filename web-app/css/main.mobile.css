@@ -1,0 +1,218 @@
+
+/* CSS stylesheet for login page */
+html {
+	display: block;
+	height: 100%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    text-shadow: none; 
+	height : 100%;
+}
+
+/* GENERAL */
+
+.ui-page, 
+.ui-body-a, 
+.ui-body-b, 
+.ui-body-c {
+    background: none repeat scroll 0 0 #A4A4A4;	
+    height: 90%; 
+}
+
+.ui-content {
+    background: none repeat scroll 0 0 #A4A4A4;
+    height: 90%;
+    margin-right: 0px;
+    padding-bottom: 18px;
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.ui-listview-filter {
+    display: block;
+    margin-bottom: 0;
+    margin-top: -22px;
+}
+
+.ui-content .ui-listview {
+	margin: 0px;	
+}
+
+.ui-body-a,
+.ui-body-b,
+.ui-body-c {
+	text-shadow: none;
+}
+
+
+.ui-input-text {
+ 	text-shadow: none;
+}	
+	
+.ui-li-has-count .ui-li-count {
+    font-size: 24px;
+    height: 30px;
+    margin-top: -22px;
+    padding-top: 6px;
+    right: 40px;
+    text-align: center;
+    width: 24px;
+}
+
+.content-primary {
+	margin: 20px 0 8px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#main-index {
+	font-size: 18px;
+	text-align: center;
+}
+
+#main-title {
+	padding: 16px;
+	background: #7fa1b7;
+	color: #ffffff;
+	text-shadow: none;
+}
+
+#main-menu .listitem {
+	min-height: 48px;
+	float: left;
+}
+
+
+.errors {
+	color: #ff6600;
+}
+
+#log-control {
+	float: right;
+	padding-right: 32px;
+}
+
+#logout {
+	float: left;
+}
+
+.hello {
+    float: left;
+    padding-right: 15px;
+    padding-top: 4px;
+}
+
+.ui-grid-d .ui-block-a, 
+.ui-grid-d .ui-block-b, 
+.ui-grid-d .ui-block-c, 
+.ui-grid-d .ui-block-d, 
+.ui-grid-d .ui-block-e {
+    width: 19.8%;
+}
+
+.ui-header-fixed, .ui-footer-fixed {
+    margin-bottom: 0;
+    padding: 2px 8px 6px 4px;
+    width: 99%;
+}
+
+#button-block-a .ui-btn, 
+#button-block-b .ui-btn, 
+#button-block-c .ui-btn, 
+#button-block-d .ui-btn,
+#button-block-e .ui-btn {
+	width: 96%;
+}
+
+.ui-grid-c .ui-block-a, 
+.ui-grid-c .ui-block-b, 
+.ui-grid-c .ui-block-c, 
+.ui-grid-c .ui-block-d,
+.ui-grid-c .ui-block-e {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#bottleList .ui-li-count {
+	margin-right: 0px; /*2em; */
+}
+
+.ui-page .ui-bar {
+	/* padding: 4px 0 2px 4px; */
+}
+
+#formContent {
+   border: 1px solid #CCCCCC;
+   margin-left: 2px;
+   margin-top: 4px;
+   padding: 1px;
+   background: none repeat scroll 0 0 #D8D8D8;
+}
+
+#formContent .ui-body {
+	margin-left: -2px;
+	margin-right: 0px;
+}
+
+#dealersBottles {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 75%;
+	margin-left: 10%;
+}
+
+#map_canvas {
+    display: inline-block;
+    height: 380px;
+    margin-left: 2%;
+    min-width: 380px;
+    text-align: center;
+    width: 96%;
+}
+
+.ui-loader-default {
+    height: 0;
+}
+
+.bottleQty a {
+	text-decoration: none;
+}
+
+/* BOTTLE POPUP */
+
+#drinkPopupPage {
+    background: none repeat scroll 0 0 #D8D8D8;
+    padding: 2px;
+    width: 260px;
+}
+#drinkPopupPage h3 {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#popup-background {
+    padding: 10px;
+    width: 238px;
+}
+#drinkForm {
+	width: 100%;
+}
+#btnDrinkYes, #btnDrinkNo {
+	width: 102px;
+}
+#titleWine {
+	width: 100%;
+}
+#drunkQuantity {
+    float: left;
+    height: 45px;
+    margin-bottom: 0;
+    margin-top: -1px;
+    width: 50px;
+    text-align: center;
+}
+#bottleNumberRegion {
+	padding-left: 30px;
+}

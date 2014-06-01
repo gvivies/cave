@@ -1,0 +1,81 @@
+
+/* CSS stylesheet for login page */
+html {
+	display: block;
+	height: 100%;
+	background: none repeat scroll 0 0 #A4A4A4;
+}
+body { 
+	font-family: Helvetica, Arial, sans-serif;
+	text-shadow: none;  
+	height : 100%;
+}
+
+.ui-page {
+    height: 100%;
+}
+
+.ui-content {
+	background: none repeat scroll 0 0 #A4A4A4;
+	text-shadow: none;
+    height: 100%;
+}
+
+#headerLogin {
+	background: none repeat scroll 0 0 #7FA1B7;
+    color: #FFFFFF;	
+}
+
+#btnlogin {
+	background: none repeat scroll 0 0 #D2D2D2;
+    color: #000000;	
+    text-shadow: none;
+}
+
+#headerLogin .ui-li-heading {
+    font-size: 20px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+    text-shadow: none;
+}
+
+.ui-grid-a,
+.ui-grid-b,
+.ui-listview-inset {
+	background: #D8D8D8;
+	padding: 4px;
+}
+
+.content-secondary {
+	 margin-right: 90px;
+	 position: relative;
+	 float: left;
+}
+
+.content-primary {
+	 float: left;
+	 min-width: 100%;
+}
+
+label.ui-input-text {
+	font-weight: bold;
+	color: #4B5053;
+	padding-left: 6px;
+}
+
+#btnlogin {
+	width: 100%;	
+}
+
+.ui-btn {
+	margin: 0;	
+}
+
+.ui-grid-b .ui-block-a,
+.ui-grid-b .ui-block-c {
+	width: 10%;
+}
+.ui-grid-b .ui-block-b {
+	width: 80%;
+}

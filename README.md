@@ -7,4 +7,4 @@ a mobile UI when browsing via mobile device.
 * MySQL 5 - Download and Install [MySQL](http://http://www.mysql.fr/products/workbench/).
 
 ## Configuration
-* Create a MySQL instance 
+* Create a MySQL instance named "cave"

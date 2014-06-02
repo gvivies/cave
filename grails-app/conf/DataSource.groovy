@@ -29,9 +29,9 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-			url = "jdbc:cloudbees://cave"
-			username = "admin"
-			password = "admin"
+			url = "jdbc:localhost://cave"
+			username = "<dbuser>"
+			password = "<dbpwd>"
 			configClass = HibernateFilterDomainConfiguration
         }
     }

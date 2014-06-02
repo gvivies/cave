@@ -1,6 +1,10 @@
-Cave is a simple Grails application that allows you to manage your wine bottles ! It also provides
+My first application in Grails ! Cave is a simple application that allows you to manage your wine bottles ! It also provides
 a mobile UI when browsing via mobile device.
 
 ## Prerequisites
-* Grails - Download and Install [Grails](https://grails.org)
-* MySQL - Download and Install [MySQL](http://http://www.mysql.fr/products/workbench/).
+* Maven 3 - Download and Install [Maven](http://maven.apache.org/)
+* Grails 2.1.3 - Download and Install [Grails](https://grails.org)
+* MySQL 5 - Download and Install [MySQL](http://http://www.mysql.fr/products/workbench/).
+
+## Configuration
+* Create a MySQL instance 
